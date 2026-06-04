@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changan Motorhome Upgrade Requirements</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#0A2239',
+                        primary: '#005A91',
+                        steel: '#4E7FA3',
+                        graphite: '#263238',
+                        techgrey: '#F3F6F8',
+                        linegrey: '#D8E1E7'
+                    },
+                    fontFamily: {
+                        space: ['"Space Grotesk"', 'sans-serif'],
+                        inter: ['"Inter"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            margin: 0;
+            background-color: #e2e8f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .page-container {
+            /* 4:5 Portrait Ratio */
+            width: 1080px;
+            height: 1350px;
+            background-color: #F3F6F8;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            display: flex;
+            flex-direction: column;
+            padding: 80px;
+        }
+        
+        /* Blueprint Background */
+        .blueprint-bg {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: 
+                linear-gradient(rgba(0, 90, 145, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 90, 145, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: 0;
+        }
+        .blueprint-bg::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at 50% 100%, rgba(0,90,145,0.08) 0%, transparent 60%);
+        }
+
+        .content-layer {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .tech-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            border: 1px solid #D8E1E7;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+        
+        .list-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 16px 24px;
+            border-bottom: 1px solid #D8E1E7;
+        }
+        .list-item:last-child {
+            border-bottom: none;
+        }
+        .icon-box {
+            color: #005A91;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            color: #4E7FA3;
+            width: 20px;
+            flex-shrink: 0;
+        }
+        .item-text {
+            font-family: 'Inter', sans-serif;
+            color: #263238;
+            font-size: 15px;
+            line-height: 1.4;
+            font-weight: 500;
+        }
+
+        /* Top accent line for cards */
+        .card-accent {
+            height: 4px;
+            background-color: #005A91;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-container">
+        <!-- Technical Background -->
+        <div class="blueprint-bg"></div>
+
+        <div class="content-layer">
+            
+            <!-- HEADER -->
+            <div class="mb-12">
+                <p class="font-space font-bold text-steel tracking-widest uppercase text-xs mb-4">Technical Requirements Insert</p>
+                <h1 class="font-space font-bold text-navy text-6xl leading-tight mb-6">Changan Motorhome<br>Upgrade Requirements</h1>
+                <div class="h-[2px] w-24 bg-primary"></div>
+            </div>
+
+            <!-- TWO COLUMNS -->
+            <div class="grid grid-cols-2 gap-8 flex-grow">
+                
+                <!-- CARD 1 -->
+                <div class="tech-card flex flex-col">
+                    <div class="card-accent"></div>
+                    <div class="p-8 pb-6 border-b border-linegrey flex items-center gap-4 bg-white/50">
+                        <div class="w-14 h-14 bg-primary text-white rounded-xl flex items-center justify-center shadow-md">
+                            <i data-lucide="droplets" class="w-7 h-7"></i>
+                        </div>
+                        <h2 class="font-space font-bold text-primary text-xl leading-tight">Toilet and Tank System to be<br>Upgraded for Changan Motorhome</h2>
+                    </div>
+                    
+                    <div class="flex-grow flex flex-col justify-around py-2">
+                        <div class="list-item">
+                            <i data-lucide="database" class="icon-box w-5 h-5"></i>
+                            <span class="number">1.</span>
+                            <span class="item-text">Black Tank – 50 Litres Capacity</span>
+                        </div>
+                        <div class="list-item">
+                            <i data-lucide="database" class="icon-box w-5 h-5"></i>
+                            <span class="number">2.</span>
+                            <span class="item-text">Grey Tank – 75 Litres Capacity</span>
+                        </div>
+                        <div class="list-item">
+                            <i data-lucide="bath" class="icon-box w-5 h-5"></i>
+                            <span class="number">3.</span>
+                            <span class="item-text">Toilet seat American concept / Ceramic</span>
+                        </div>
+                        <div class="list-item">
+                            <i data-lucide="monitor" class="icon-box w-5 h-5"></i>
+                            <span class="number">4.</span>
+                            <span class="item-text">Control for Auto Drain should be dual control<br><span class="text-steel text-sm font-normal mt-1 block">(Main display / Driver side)</span></span>
+                        </div>
+                        <div class="list-item">
+                            <i data-lucide="gauge" class="icon-box w-5 h-5"></i>
+                            <span class="number">5.</span>
+                            <span class="item-text">Gauge for black and grey tank should be on the control screen</span>
+                        </div>
+                        <div class="list-item">
+                            <i data-lucide="shower-head" class="icon-box w-5 h-5"></i>
+                            <span class="number">6.</span>
+                            <span class="item-text">Shattaf</span>
+                        </div>
+                        <div class="list-item">
+                            <i data-lucide="wind" class="icon-box w-5 h-5"></i>
+                            <span class="number">7.</span>
+                            <span class="item-text">Black and tank vent</span>
+                        </div>
+                        <div class="list-item">
+                            <i data-lucide="refresh-cw" class="icon-box w-5 h-5"></i>
+                            <span class="number">8.</span>
+                            <span class="item-text">Black and tank flush system</span>
+                        </div>
+                        <div class="list-item">
+                            <i data-lucide="droplet" class="icon-box w-5 h-5"></i>
+                            <span class="number">9.</span>
+                            <span class="item-text">Fresh water tank upgrade</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="tech-card flex flex-col">
+                    <div class="card-accent"></div>
+                    <div class="p-8 pb-6 border-b border-linegrey flex items-center gap-4 bg-white/50">
+                        <div class="w-14 h-14 bg-primary text-white rounded-xl flex items-center justify-center shadow-md">
+                            <i data-lucide="layout-dashboard" class="w-7 h-7"></i>
+                        </div>
+                        <h2 class="font-space font-bold text-primary text-xl leading-tight">Interior to be Upgraded<br>for Changan Motorhome</h2>
+                    </div>
+                    
+                    <div class="flex-grow flex flex-col justify-around py-2">
+                        <div class="list-item">
+                            <i data-lucide="bed" class="icon-box w-5 h-5"></i>
+                            <span class="number">1.</span>
+                            <span class="item-text">Bed and Table level (same Hybrid concept)</span>
+                        </div>
+                        <div class="list-item">
+                            <i data-lucide="fan" class="icon-box w-5 h-5"></i>
+                            <span class="number">2.</span>
+                            <span class="item-text">Need to add 14" fan In and Out in ceiling area</span>
+                        </div>
+                        <div class="list-item">
+                            <i data-lucide="air-vent" class="icon-box w-5 h-5"></i>
+                            <span class="number">3.</span>
+                            <span class="item-text">A/C position should be in the back same as the hybrid</span>
+                        </div>
+                        <div class="list-item">
+                            <i data-lucide="arrow-down-to-line" class="icon-box w-5 h-5"></i>
+                            <span class="number">4.</span>
+                            <span class="item-text">Stabilizer Jack should be electric</span>
+                        </div>
+                        <div class="list-item">
+                            <i data-lucide="layers" class="icon-box w-5 h-5"></i>
+                            <span class="number">5.</span>
+                            <span class="item-text">Bunker bed – height should be increased</span>
+                        </div>
+                        <div class="list-item">
+                            <i data-lucide="gauge" class="icon-box w-5 h-5"></i>
+                            <span class="number">6.</span>
+                            <span class="item-text">Adding Air Compressor</span>
+                        </div>
+                        <div class="list-item">
+                            <i data-lucide="shirt" class="icon-box w-5 h-5"></i>
+                            <span class="number">7.</span>
+                            <span class="item-text">Cabin for hanging dress with toilet door</span>
+                        </div>
+                        <div class="list-item">
+                            <i data-lucide="sun" class="icon-box w-5 h-5"></i>
+                            <span class="number">8.</span>
+                            <span class="item-text">The solar panel need to increase</span>
+                        </div>
+                        <div class="list-item">
+                            <i data-lucide="truck" class="icon-box w-5 h-5"></i>
+                            <span class="number">9.</span>
+                            <span class="item-text">Black edition body</span>
+                        </div>
+                        <div class="list-item">
+                            <i data-lucide="battery-charging" class="icon-box w-5 h-5"></i>
+                            <span class="number">10.</span>
+                            <span class="item-text">Upgrade the Battery power</span>
+                        </div>
+                        <div class="list-item">
+                            <i data-lucide="snowflake" class="icon-box w-5 h-5"></i>
+                            <span class="number">11.</span>
+                            <span class="item-text">Need to add car A/C inside the Cabin</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <!-- Bottom Subtle Line (No Page Number) -->
+            <div class="mt-8 border-t border-linegrey pt-4 text-center">
+                <span class="font-mono text-steel text-[9px] uppercase tracking-[0.2em] opacity-70">SAHIYOO × GCC 2026 • Structural Modification Protocol</span>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+      lucide.createIcons();
+    </script>
+</body>
+</html>
